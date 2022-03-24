@@ -1,13 +1,5 @@
 % simulation of a tempotron learning
 
-% TODO: Student1, Name and ID
-% DAvid Griver, 316501758
-% TODO: Student2, Name and ID
-% Aviya Rosenfeld 313193195
-
-% Introduction to Computation and Cognition - ex4
-% See PDF document for instructions
-
 clear; close all; clc;
 
 %% Declare simulation parameters
@@ -49,7 +41,6 @@ load X_2SDIW;   % Samples, N
 
 %% Declare the learning parameters
 
-% TODO 3: change the learning rate (this is the last thing you should do)
 eta      	= 10e-3;	% Learning rate
 max_epochs  = 100;	% Maximal number of learning epochs
 n_samples   = length(Samples);
@@ -105,8 +96,8 @@ for ep = 1:max_epochs
             V = V + DeltaV;
 
             % Find the maximum voltage and its corresponding time
-            % TODO 5: find the voltage global maximum, and update the
-            %         variables V_max, t_max and k_max if necessary
+            % find the voltage global maximum, and update the
+            % variables V_max, t_max and k_max if necessary
             if max(V) > V_max
                 V_max = max(V);
                 k_max = k;
@@ -143,8 +134,6 @@ for ep = 1:max_epochs
     
     end
     
-    % TODO 9: in your report, explain this part. What would have happenned 
-    %         if it was ommitted completely? 
     if ep_errors == 0
         break;
     end
